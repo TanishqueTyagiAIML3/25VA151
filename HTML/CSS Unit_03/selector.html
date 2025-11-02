@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CSS Selector</title>
+        <!--Internal and External CSS use Selector-->
+        <!--Inline prefrenece over Internal-->
+        <style>
+            h1{
+                color:aquamarine;
+                font-size: 30px; 
+                font-family:Georgia, 'Times New Roman',Times,serif ;
+            }
+            .txt_clr{
+                color:#999;
+            }
+            #para{
+                color:blueviolet;
+            }
+            p,h1,h3{
+                font-style:italic;
+            }
+        </style><!--p.h1,h3-Grouping Element-->
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+        <!--id is identity element -->
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus fugiat praesentium eaque sequi. Commodi a sint ea earum distinctio, necessitatibus laborum similique ipsum, eos harum nobis deleniti autem modi praesentium.</p>
+        <P class="txt_clr">
+             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, optio pariatur tempore quibusdam praesentium delectus magni repellat alias numquam facere nostrum reiciendis dolores deserunt itaque culpa nesciunt deleniti illum ullam?
+        </P>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quos cupiditate eos nulla harum ducimus, totam nesciunt debitis deleniti magnam sit voluptate sequi quas? Rem nemo ipsam reiciendis ad itaque.
+        </p>
+        <!--to use css in multiple element than create class represent as .-->
+        <h3 class="txt_clr">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint veritatis ipsa id tempore rem accusamus nostrum deserunt, vero quos neque eos quibusdam voluptatibus error nobis tenetur labore qui eius? Hic.</h3>
+    </body>
+</html>

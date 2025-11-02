@@ -2,10 +2,31 @@
 <html lang="en">
     <head>
         <title>Time Table</title>
+        <style>
+            /* This is internal CSS*/
+            .tab{
+             color:#000;
+             font-style:italic;
+            }
+            #center{
+               text-align:center;
+               font-size:10px;
+               font-style:italic;
+            }
+            h1{
+                color:white;
+                font-style:italic;
+            }
+            .back_cover{
+                background-image:url(https://images.pexels.com/photos/714701/pexels-photo-714701.jpeg?cs=srgb);
+                background-size:cover;
+                background-repeat: no-repeat;
+            }
+        </style>
     </head>
-    <body >
-        <center><h1><img src="https://www.abes.ac.in/assets/Logo.png" alt="cruppted" width="500"><i>ABES Engineering College,Ghaziabad<br>Class Time Table</i></h1></center>
-        <table align="center" width="100%" cellpadding="5" cellspacing="0" border="1">
+    <body class="back_cover" >
+        <center><h1><img src="https://www.abes.ac.in/assets/Logo.png" alt="cruppted" width="500">ABES Engineering College,Ghaziabad<br>Class Time Table</h1></center>
+        <table class="tab" align="center" width="100%" cellpadding="5" cellspacing="0" border="1">
             <tr>
                <th align="left" ><h2>Course:B.Tech<br>Semister/Section-I/Cse AI-ML<br>Class Room No.RJ-106,RJ-201,RJ-202,RJ-203,RJ-204</h2></th>
                <th align="center"><h2>Department: Applied Science and Humanities</h2></th>
@@ -13,8 +34,8 @@
             </tr>
         </table>
         <p></p><p></p><p></p>
-        <table align="center" width="100%" cellpadding="5" cellspacing="0" border="1">
-            <tr align="center">
+        <table id="center" align="center" width="100%" cellpadding="5" cellspacing="0" border="1">
+            <tr>
                 <th rowspan="2">Time&rarr;<br>/<br>Day&darr;</th>
                 <th>I</th>
                 <th>II</th>
@@ -26,7 +47,7 @@
                 <th>VIII</th>
                 <th>IX</th>
             </tr>
-            <tr align="center">
+            <tr>
                 <th>8:50-9:40</th>
                 <th>9:40-10:30</th>
                 <th>10:40-11:30</th>
@@ -37,7 +58,7 @@
                 <th>2:50-3:40</th>
                 <th>3:40-4:30</th>
             </tr>
-            <tr align="center">
+            <tr>
                 <th>Monday</th>
                 <th colspan="2" style="background-color: bisque;">25CS101<br>(SOV)<br>RJ-202</th>
                 <th style="background-color: orange;">25AS102<br>(PA)<br>RJ-202</th>
@@ -47,7 +68,7 @@
                 <th style="background-color: greenyellow">25ME101<br>(CR)<br>RJ-202</th>
                 <th colspan="2" style="background-color: gray;">25VA151<br>(SSI)<br>RJ-202</th>
             </tr>
-            <tr align="center">
+            <tr>
                 <th>Tuesday</th>
                 <th style="background-color: orange;">25AS102<br>(PA)<br>RJ-204</th>
                 <th style="background-color: yellow;">25HU102<br>(SSH)<br>RJ-204</th>
@@ -57,7 +78,7 @@
                 <th style="background-color: lightblue;">25EC101<br>(KC)<br>RJ-201</th>
                 <th style="background-color: greenyellow">25ME101<br>(CR)<br>RJ-201</th>
             </tr>
-            <tr align="center">
+            <tr>
                 <th>Wednesday</th>
                 <th colspan="2" style="background-color: bisque;">25CS151<br>(SOV)<br>RJ-203</th>
                 <th style="background-color: yellow;">25HU102<br>(SSH)<br>RJ-203</th>
@@ -66,7 +87,7 @@
                 <th style="background-color: lightblue;">25EC101<br>(KC)<br>RJ-201</th>
                 <th style="background-color: orange;">25AS102<br>(PA)<br>RJ-201</th>
             </tr>
-            <tr align="center">
+            <tr >
                 <th>Thrusday</th>
                 <th style="background-color: lightgreen;">25HU101<br>(KG)<br>RJ-201</th>
                 <th style="background-color: greenyellow">25ME101<br>(CR)<br>RJ-201</th>
@@ -75,7 +96,7 @@
                 <th colspan="2" style="background-color: bisque;">25CS101<br>(SOV)<br>RJ-202</th>
                 <th style="background-color: lightblue;">25EC101<br>(KC)<br>RJ-202</th>
             </tr>
-            <tr align="center">
+            <tr>
                 <th>Friday</th>
                 <th style="background-color: greenyellow">25ME101<br>(CR)<br>RJ-203</th>
                 <th style="background-color: lightblue;">25EC101<br>(KC)<br>RJ-203</th>
