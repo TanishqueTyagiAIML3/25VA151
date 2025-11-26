@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 5</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        html,*{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        main{
+            width: 1200px;
+            height: 800px;
+            background-color: #999;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        #hdr,#container,#ftr{
+            background-color: antiquewhite; 
+            height: 100px;
+        }
+        #container{
+            height: 400px;
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+
+        }
+        #left, #right{
+            flex-grow: 1; background-color: aliceblue;
+        }
+        #center{
+            flex-grow: 2; background-color: aqua;
+        }
+        #hdr_top{
+            height: 150px;
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            text-align: center;
+            align-items: center;
+            line-height: 150px;
+        }
+        #hdr_top_left{
+    
+            flex-grow: 1;
+            background-color: aliceblue;
+        }
+        #hdr_top_rgt{
+            flex-grow: 2; background-color: rgb(219, 227, 224);
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <div id="hdr_top">
+           <div id="hdr_top_left"><h2>Header Logo</h2></div>
+           <div id="hdr_top_rgt"><h2>Header Banner</h2></div>
+        </div>
+        <div id="hdr">
+            <h2>Header Bar</h2>
+        </div>
+        <div id="container">
+           <div id="left"><h2>Left</h2></div>
+           <div id="center"><h2>Center</h2></div>
+           <div id="right"><h2>Right</h2></div>
+        </div>
+        <div id="ftr">
+            <h2>Footer Bar</h2>
+        </div>
+    </main>
+</body>
+</html>
