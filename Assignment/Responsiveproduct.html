@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resposive Product Grid</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 10px;
+            width: 100%;
+        }
+
+        main {
+            display: grid;
+            width: 100%;
+            grid-template-columns: auto;
+            column-gap: 20px;
+            row-gap: 20px;
+            margin: auto;
+            border: 1px solid black;
+            border-radius: 2px;
+        }
+
+        .header {
+            font-size: large;
+            text-transform: uppercase;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            padding-left: 20px;
+        }
+
+        .nav {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto;
+            background-color: black;
+            color: white;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            column-gap: 10px;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .l1 {
+            padding-left: 20px;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+
+        div.l1 p {
+            display: inline;
+        }
+
+        div.l1 h2 {
+            border-top: 1px solid black;
+            font-size: 15px;
+        }
+
+        div.l1 h1 {
+            font-size: 20px;
+        }
+
+        .l2 {
+            grid-column-start: 2;
+            grid-column-end: 6;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            column-gap: 5px;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+        }
+
+        button {
+            background-color: lightgray;
+        }
+
+        .box {
+            border: 1px solid black;
+            border-radius: 2px;
+            padding-bottom: 20px;
+        }
+
+        div.nav div {
+            text-align: center;
+        }
+
+        div.nav div:hover {
+            border-bottom: 2px solid white;
+        }
+
+        @media (max-width: 1024px) {
+            .l2 {
+                grid-template-columns: auto auto;
+            }
+
+            img {
+                width: 250px;
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            .l1 {
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+
+            .l2 {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-template-columns: auto auto;
+            }
+
+            img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav {
+                grid-template-columns: auto auto;
+                row-gap: 10px;
+            }
+
+            .l2 {
+                grid-template-columns: auto;
+            }
+
+            img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="header">
+            <h1>responsive product grid</h1>
+        </div>
+        <div class="nav">
+            <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPE9VD7hC5m5iUcMPpHnJWJj37QdoVWgzLsg&s"
+                    alt="" style="width: 30px; height:30px"></div>
+            <div>Home</div>
+            <div>Products</div>
+            <div><input type="search" placeholder="Search for products"></div>
+            <div>Login</div>
+            <div>Cart</div>
+        </div>
+        <div class="content">
+            <div class="l1">
+                <h1>Filters</h1>
+                <h2>Category</h2>
+                <input type="checkbox">
+                <p>Prices</p>
+            </div>
+            <div class="l2">
+                <div class="box">
+                    <img src="/images/headphone2.jpg" alt="cruppted">
+                    <h4>Earbuds</h4>
+                    <p>&#8377;1500</p>
+                    <button>Add To Cart</button>
+                </div>
+                <div class="box">
+                    <img src="/images/headphone5.jpg" alt="cruppted">
+                    <h4>Digital Headphone</h4>
+                    <p>&#8377;1000</p>
+                    <button>Add To Cart</button>
+                </div>
+                <div class="box">
+                    <img src="/images/headphone3.jpg" alt="cruppted">
+                    <h4>Wired Headphone</h4>
+                    <p>&#8377;2000</p>
+                    <button>Add To Cart</button>
+                </div>
+            </div>
+            <div class="l2">
+                <div class="box">
+                    <img src="https://m.media-amazon.com/images/I/719Co4gAMcL.jpg" alt="crupppted">
+                    <h4>Gaming Mouse</h4>
+                    <p>&#8377;9000</p>
+                    <button>Add To Cart</button>
+                </div>
+                <div class="box">
+                    <img src="https://m.media-amazon.com/images/I/614q24eTLBL.jpg" alt="cruppted">
+                    <h4>Wired Mouse</h4>
+                    <p>&#8377;300</p>
+                    <button>Add To Cart</button>
+                </div>
+                <div class="box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC2LM9Mey3FXbt4MDwt02RuSbGR4mSj_GS3A&s"
+                        alt="cruppted">
+                    <h4>Charger</h4>
+                    <p>&#8377;500</p>
+                    <button>Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
