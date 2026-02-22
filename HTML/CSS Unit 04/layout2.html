@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2nd Flex</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        #design{
+            background-color: bisque;
+            margin:auto;
+            width:500px;
+            height:800px;
+            display:flex;
+            flex-wrap: wrap;
+            border:2px solid black;
+            box-shadow:2px 2px 10px red;
+            outline:2px solid red;
+            outline-offset: 20px;
+            flex-direction: row;
+            justify-content: end;
+        }
+        .nav{
+            flex-basis: 500px;
+            height:100px;
+            background-color: gray;
+            margin:5px;
+        }
+       .long{
+        flex-basis:300px;
+        height:200px;
+        background-color: grey;
+        margin:5px 0px;
+       }
+    </style>
+</head>
+<body>
+    <main id="design">
+        <div class="nav"></div>
+        <div class="long"></div>
+        <div class="long" style="height:400px;"></div>
+        <div class="nav" style="height:55px;"></div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            box-sizing: border-box;
+            background-color: black;
+        }
+       main{
+        background-color: white;
+        margin:auto;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width:800px;
+        height:400px;
+        border:1px solid black;
+        border-radius: 3px;
+        justify-content: space-between;
+       }
+       .h1{
+        flex-basis:40px;
+        width:800px;
+        display:flex;
+        flex-direction: row;
+        background-color: brown;
+       }
+       .h2{
+        flex-basis:320px;
+        display:flex;
+        flex-direction: column;
+       }
+       .r1{
+        flex-basis:200px;
+       }
+       .r2{
+        flex-basis:600px;
+        color:white;
+       }
+       .r3{
+        width:40px;
+        height:50px;
+        margin-left:140px ;
+        margin-top:10px;
+       }
+       .b1{
+            flex-basis:50px;
+            text-align: center;
+            font-size: 10px;
+       }
+       .b2{
+        display: flex;
+        flex-direction: row;
+        flex-basis: 260px;
+        padding:5px;
+       }
+       .p1{
+        flex-basis:600px; 
+        display:flex;
+        flex-direction: column;
+       }
+       .p2{
+        flex-basis:200px;
+        padding:10px;
+       }
+       .self{
+         flex-basis: 40px;
+         display:flex;
+         flex-direction: row;
+       }
+       .pac1{
+        flex-basis:200px;
+        padding-top:20px;
+        padding-left:40px;
+       }
+       .pac2{
+        flex-basis:400px;
+       }
+       #pos{
+        position: relative;
+        bottom:0px;
+        left:0px;
+        border-bottom: 2px dotted black;
+       }
+       #image{
+        margin-left:20px;
+        width:150px;
+        height:150px;
+       }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="h1">
+            <div class="r1"><img src="https://college4u.in/wp-content/uploads/2018/03/abes.png" alt="cruppted" class="r3"></div>
+            <div class="r2"><p style="font-size:20px; margin-top:10px;">Academy of Business and Engineering Sciences Engineering College<br>(College Code-032)</p></div>
+        </div>
+        <div class="h2">
+            <div class="b1"><p>19th KM Stone, NH-09, Ghaziabad-201009,UP,India<br>ph-0120-7135112,9999889341,Fax;0120-7135115,Email:info@abes.ac.in,website:www.abes.ac.in</p></div>
+            <div class="b2">
+              <div class="p1">
+                <div class="self">
+                 <div class="pac1"><strong>Admission No.</strong></div>
+                 <div class="pac2"><p id="pos">2025B15310035</p></div>
+                </div>
+                <div class="self">
+                    <div class="pac1"><strong>Name</strong></div>
+                    <div class="pac2"><p id="pos">TANISHQUE TYAGI</p></div>
+                </div>
+                <div class="self">
+                    <div class="pac1"><strong>Father's Name</strong></div>
+                    <div class="pac2"><p id="pos">PRAVEEN KUMAR TYAGI</p></div>
+                </div>
+                <div class="self">
+                    <div class="pac1"><strong>Course</strong></div>
+                    <div class="pac2"><p id="pos">CSE AI-ML</p></div>
+                </div>
+              </div>
+              <div class="p2">
+                 <p style="color:brown;margin-left:30px;">Temporarry I-Card</p>
+                 <img src="/images/Self.jpg" alt="cruppted" id="image">
+              </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

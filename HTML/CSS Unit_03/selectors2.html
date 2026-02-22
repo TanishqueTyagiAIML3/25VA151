@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector : CSS Combinators</title>
+    <style>
+        /* combonators */
+         /* div p{
+            color: rgb(25, 235, 21);
+        } */
+        /* div > p {
+              background-color: blueviolet;
+        }
+        div + p {
+            font-size: 30px;
+        } */
+        /* CSS Pseudo-classes
+A CSS pseudo-class is a keyword that can be added to a selector, to define a style for a special state of an element. */
+/* a:hover{
+    color: rgb(191, 43, 43);
+}
+a:visited{
+    color: blueviolet;
+}
+a:link{
+    background-color: aqua;
+} */
+
+/* CSS Pseudo-Elements
+A CSS pseudo-element is a keyword that can be added to a selector, to style a specific part of an element. */
+
+div p {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div p::first-letter{
+    color: brown; font-weight: bold; font-size: 50px;
+}
+
+div p::first-line{
+    text-transform: capitalize;
+}
+::marker{
+    color: red;
+    font-size: 40px;
+}
+ul{
+    /* list-style: none; */
+    display: flex;
+}
+ul li{
+    margin: 10px;
+    border-right: 1px solid #F04;
+    padding-right: 20px;
+
+}
+
+ul li:nth-child(5){
+    border-right: 0px;
+}
+ul li::first-letter{
+    font-size: 25px; color: aqua;
+}
+
+
+.para::first-letter{
+    color:red;
+
+}
+.para::before{
+    content: "Read More";
+    color: blue;
+    font-size: 30px;
+}
+div{
+    box-sizing: border-box;
+}
+
+
+    </style>
+</head>
+<body>
+    <p class="para">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non porro sit deserunt voluptatem cupiditate odit quasi doloribus, ipsum minus eius ducimus ratione ut molestias neque sint error earum dolore tenetur?
+    </p>
+    <!--first div-->
+   <div>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur saepe ullam repellendus nobis, sunt accusamus aliquid adipisci eum. Quo optio in labore nostrum architecto. Est, dolores ratione! Voluptatum, explicabo ullam.</p>
+
+     <a href="#" target="_blank">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde consectetur atque provident? Ab, voluptates optio laudantium aspernatur quos sapiente et, maiores eos, voluptate molestias consequuntur sit voluptatibus voluptatum consectetur quas.</p>
+     </a>
+
+   </div><!--first div-->
+   <p><!--second para-->
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima fugit quod at nisi eveniet aspernatur quidem labore id ullam recusandae optio, vel, sunt doloribus, neque dolore ducimus. Enim, omnis odit.
+   </p>
+
+   <ul>
+    <li>home</li>
+    <li>about</li>
+    <li>contact</li>
+    <li>serives</li>
+    <li>gallery</li>
+   </ul>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flex 3</title>
+        <style>
+            #box{
+                background-color: bisque;
+                display:flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                border:2px solid black;
+                box-shadow:2px 2px 10px red;
+                border-radius: 2px;
+                outline:2px solid red;
+                outline-offset: 20px;
+                width:500px;
+                height:800px;
+                margin:auto;
+                justify-content: space-between;
+            }
+            .edit{
+                flex-basis:500px ;
+                height:150px;
+                background-color: grey;
+                margin:5px;
+            }
+            .mul{
+                flex-basis:150px;
+                height:200px;
+                background-color: grey;
+                margin:5px;
+            }
+        </style>
+    </head>
+    <body>
+        <main id="box">
+           <div class="edit"></div>
+           <div class="edit" style="height:200px;"></div>
+           <div class="edit"></div>
+           <div class="mul"></div>
+           <div class="mul"></div>
+           <div class="mul"></div>
+           <div class="edit" style="height:50px;"></div>
+        </main>
+    </body>
+</html>

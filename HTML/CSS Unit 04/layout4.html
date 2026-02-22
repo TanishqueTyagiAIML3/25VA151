@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex 4</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        main{
+            background-color: beige;
+            margin:auto;
+            border:2px solid black;
+            border-radius: 2px;
+            box-shadow: 2px 2px 10px red;
+            outline:2px solid orange;
+            outline-offset: 10px;
+            display:flex;
+            flex-wrap: wrap;
+            justify-content:space-between;
+            flex-direction: row;
+            width:500px;
+            height:800px;
+        }
+        .box1{
+            background-color: grey;
+            flex-basis:500px ;
+            margin:5px;
+            height:100px;
+        }
+        .box2{
+            background-color: grey;
+            flex-basis:200px;
+            margin-right:5px;
+            margin-left:5px;
+            height:500px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+       <div class="box1" style="height:50px;"></div>
+       <div class="box1" ></div>
+       <div class="box2"></div>
+        <div class="box2" style="flex-basis: 280px;"></div>
+       <div class="box1" style="height:50px;"></div>
+    </main>
+</body>
+</html>

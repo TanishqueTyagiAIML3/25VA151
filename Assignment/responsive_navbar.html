@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive navigation bar</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        #nav {
+            background-color: black;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            flex-basis: 10px;
+            justify-content: space-between;
+            color: white;
+        }
+
+        .box {
+            flex-basis: 12.5%;
+            text-align: center;
+            margin: auto;
+            font-size: 25px;
+        }
+
+        .box1 {
+            flex-basis: 12.5%;
+            text-align: center;
+            margin: auto;
+            font-size: 25px;
+        }
+
+        .content {
+            padding: 10px;
+        }
+
+        @media only screen and (max-width: 850px) {
+            div.box {
+                flex-direction: column;
+                flex-basis: 100%;
+                border-bottom: 1px solid white;
+            }
+
+            div.box1 {
+                flex-basis: 100%;
+                background-image: url(/images/hamburger_icon.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                border-bottom: 1px solid white;
+                text-align: left;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div id="nav">
+            <div class="box1">Shopping Web</div>
+            <div class="box">Home</div>
+            <div class="box">Product</div>
+            <div class="box">Category</div>
+            <div class="box"> Deal</div>
+            <div class="box">Contact</div>
+            <div class="box">Cart</div>
+            <div class="box">Login</div>
+        </div>
+        <div class="content">
+            <h1>Welcome to Shopping app</h1>
+        </div>
+    </main>
+</body>
+
+</html>
