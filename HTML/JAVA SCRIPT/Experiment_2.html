@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 5</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, rgb(144, 202, 246), rgb(196, 196, 151), rgb(204, 112, 112));
+        }
+
+        main {
+            width: 800px;
+            position: absolute;
+            left: 30%;
+            top: 20%;
+            border: 2px solid white;
+            display: grid;
+            grid-template-columns: auto;
+            background: linear-gradient(135deg, rgb(134, 73, 73), rgb(190, 152, 81), white);
+            border-radius: 4%;
+        }
+
+        .header {
+            font-style: italic;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+
+        }
+
+        .clicking {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            margin: 0px 10px 50px 10px;
+            height: 30px;
+        }
+
+        button:hover {
+            border: 2px solid red;
+        }
+
+        .text {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .entry {
+            display: grid;
+            grid-template-columns: auto auto;
+            column-gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .entry input {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .entry input:nth-child(5) {
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h2 class="header"> Employee Details</h2>
+        <div class="entry">
+            <input type="text" name="" id="IDs" placeholder="EMployee ID" required>
+            <input type=" text" name="" id="Naming" placeholder="Employee Name" required>
+            <input type="text" name="" id="Salaries" placeholder="EMployee Salary" required>
+            <input type=" text" name="" id="Depo" placeholder="Employee Department" required>
+            <input type="submit" name="" id="" onclick="submission()">
+
+        </div>
+        <div class="clicking">
+            <div>
+                <button onclick="names()">Employee names</button>
+                <div id="name">
+                </div>
+            </div>
+            <div>
+                <button onclick="salary()">
+                    Salary greater than 50000
+                </button>
+                <div id="income"> </div>
+            </div>
+            <div>
+                <button onclick="add()">
+                    Total Salary
+                </button>
+                <div id="total"></div>
+            </div>
+            <div>
+                <button onclick="avg()">Avg Salary</button>
+                <div id="average"></div>
+            </div>
+            <div>
+                <button onclick="depart()">Specific Department</button>
+                <div id="department"></div>
+            </div>
+        </div>
+    </main>
+    <script>
+        var arr = [];
+        let c = 0;
+        let count2 = 0;
+        let count3 = 0;
+        let count4 = 0;
+        let count5 = 0;
+        let idx = 0;
+        function submission() {
+            employe_ID = Number(document.getElementById("IDs").value);
+            employe_Name = document.getElementById("Naming").value;
+            employe_Salary = Number(document.getElementById("Salaries").value);
+            employe_Depart = document.getElementById("Depo").value;
+            let employe = {
+                ID: employe_ID,
+                Name: employe_Name,
+                Salary: employe_Salary,
+                Department: employe_Depart,
+            }
+            arr[idx] = employe;
+            idx++;
+        }
+        function names() {
+            c++;
+            let name = document.getElementById("name");
+            if (c % 2 != 0) {
+                for (let i = 0; i < idx; i++) {
+                    name.innerHTML += `<p class="text">${arr[i].Name}</p>`;
+                }
+            }
+            else
+                name.innerHTML = "";
+        }
+        function salary() {
+            count2++;
+            let sal = document.getElementById("income");
+            if (count2 % 2 != 0) {
+                for (let i = 0; i < idx; i++) {
+                    if (arr[i].Salary > 50000)
+                        sal.innerHTML += `<p class="text">${arr[i].Name}</p>`;
+                }
+            }
+            else
+                sal.innerHTML = "";
+        }
+        function add() {
+            count3++;
+            let t = 0;
+            if (count3 % 2 != 0) {
+                for (let i = 0; i < idx; i++)
+                    t = t + arr[i].Salary;
+                document.getElementById("total").innerHTML = `<p class="text">${t}</p>`;
+            } else
+                document.getElementById("total").innerHTML = "";
+        }
+        function avg() {
+            count4++;
+            if (count4 % 2 != 0) {
+                let avg = 0;
+                for (let i = 0; i < idx; i++)
+                    avg = avg + arr[i].Salary;
+                document.getElementById("average").innerHTML = `<p class="text">${avg / (idx)}</p>`;
+            }
+            else
+                document.getElementById("average").innerHTML = "";
+        }
+        function depart() {
+            count5++;
+            if (count5 % 2 != 0) {
+                let count1 = 0, count2 = 0, count3 = 0;
+                for (let i = 0; i < idx; i++) {
+                    if (arr[i].Department === "AIML")
+                        count1++;
+                    if (arr[i].Department === "CSE")
+                        count2++;
+                    if (arr[i].Department === "DS")
+                        count3++;
+                }
+                if (count1 != 0 && (count2 == 0 || count3 == 0))
+                    document.getElementById("department").innerHTML = `<p class="text">AIML Department : ${count1} </p>`;
+                else if (count2 != 0 && (count1 == 0 || count3 == 0))
+                    document.getElementById("department").innerHTML = `<p class="text">CSE Department : ${count2}</p>`;
+                else if ((count1 == 0 || count2 == 0) && count3 != 0)
+                    document.getElementById("department").innerHTML = `<p class="text">Data Science : ${count3}</p>`;
+                else if (count1 == 0 && count2 == 0 && count3 == 0)
+                    document.getElementById("department").innerHTML = ``;
+                else
+                    document.getElementById("department").innerHTML = `<p class="text">AIML Department : ${count1} </p><br><p class="text">CSE Department : ${count2}</p><br><p class="text">Data Science : ${count3}</p>`;
+
+            } else
+                document.getElementById("department").innerHTML = "";
+        }
+    </script>
+</body>
+
+</html>

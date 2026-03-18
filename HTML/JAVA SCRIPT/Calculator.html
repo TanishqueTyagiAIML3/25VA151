@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            background-color: bisque;
+        }
+        main{
+            position: absolute;
+            left:40%;
+            top:10%;
+            width:300px;
+         height:250px;
+            display:grid;
+            grid-template-rows: auto auto;
+            padding: 10px 20px;
+            border:2px solid black;
+
+        }
+        .digits{
+            display: grid;
+            grid-template-columns: auto auto auto auto ;
+        }
+        input{
+            height:50%;
+            width:100%;
+            text-align:right;
+        }
+        h2{
+            font-style: italic;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <h2>Calculator</h2>
+    <main>
+        <div>
+            <input type="text" name="" id="Value">
+        </div>
+        <div class="digits">
+            <button  >1</button>
+            <button>2</button>
+            <button >3</button>
+            <button >*</button>
+            <button  >4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>/</button>
+            <button  >7</button>
+            <button >8</button>
+            <button>9</button>
+            <button>%</button>
+            <button>+</button>
+            <button>0</button>
+            <button>-</button>
+            <button >=</button>
+        </div>
+    </main>
+    <script>
+        let count=0;
+           let buttn=document.querySelectorAll("button");
+            buttn.forEach(function(btn) {
+       btn.addEventListener("click", function(event) {
+        if(event.target.innerText!=="=")
+      document.getElementById("Value").value+=event.target.innerText;
+       else
+       {
+        let num1="";
+        let i=0;
+        let num=document.getElementById("Value").value;
+        while(i<num.length)
+       {
+        if(num[i]>='0' && num[i]<='9')
+        num1=num1+num[i];
+    else
+    break;
+i++;
+       }
+       let num2="";
+        let sign=num[i];
+        let j=i+1;
+        while(j<num.length)
+       {
+          num2=num2+num[j];
+          j++;
+       }
+       if(sign==="+")
+       document.getElementById("Value").value=(Number(num1))+(Number(num2));
+    else if(sign==='-')
+         document.getElementById("Value").value=(Number(num1))-(Number(num2));
+        else if(sign=='*')
+         document.getElementById("Value").value=(Number(num1))*(Number(num2));
+        else if(sign=='/')
+         document.getElementById("Value").value=(Number(num1))/(Number(num2));
+        else if(sign=='%')
+         document.getElementById("Value").value=(Number(num1))%(Number(num2));
+       }
+
+    })
+        }) 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exxperimet-4</title>
+    <style>
+        body {
+            background-color: aqua;
+        }
+
+        h1 {
+            font-style: italic;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Result Program</h1>
+    <script>
+        let sub = Number(prompt("Enter the No of subject"));
+        let mark = [];
+        for (let i = 0; i < sub; i++)
+            mark[i] = Number(prompt(`Enter the ${i + 1} subject marks`));
+        let total = 0, avg = 0.00;
+        for (let i = 0; i < sub; i++) {
+            total = total + mark[i];
+        }
+        avg = total / sub;
+        document.write(`<p>Total Marks = ${total}<br>Average Marks= ${total / sub}</p>`);
+        if (avg >= 60)
+            document.write("<p>Grade = A <br> Result =Pass </p>");
+        else if (avg >= 50 && avg < 60)
+            document.write("<p>Grade = B <br>Result = Pass</p>");
+        else if (avg >= 40 && avg < 50)
+            document.write("<p>Grade = C <br> Result = Pass</p>");
+        else
+            document.write("<p>Grade = D <br> Result= Fail</p>");
+    </script>
+</body>
+
+</html>
