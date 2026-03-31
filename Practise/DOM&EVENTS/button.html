@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content{
+             color:red;
+        }
+        .update{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <p class="content">I am hero</p>
+    <script>
+        let btn=document.createElement("button");
+        btn.innerText="Click Me";
+        btn.style.backgroundColor="red";
+        btn.style.color="white";
+        btn.style.padding="10px";
+        btn.style.textAlign="center";
+        document.querySelector("body").prepend(btn);
+    </script>
+</body>
+</html>

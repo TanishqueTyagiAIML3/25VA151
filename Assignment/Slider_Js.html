@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            border:2px solid aqua;
+            box-shadow: 1px 2px black outset;
+               width:600px;
+               height:450px;
+               display:grid;
+               grid-template-columns: auto;
+             overflow: hidden;
+        }
+        main img{
+             grid-column-start: 1;
+             grid-column-end:2;
+             grid-row-start: 1;
+             position: relative;
+             grid-row-end: 2;
+             width:600px;
+             height:450px;
+        }
+        body{
+        box-sizing: border-box;
+        background-color: black;
+        }
+        .left{
+            background-color: white;
+            width:40px;
+            height:40px;
+            color:white;
+            padding:20px 20px;
+            margin-top:100%;
+            border-radius:50%;
+            align-content: center;
+            display: inline-block;
+
+        }
+        #lftclick{
+
+            width:50%;
+            height:50%;
+            border-left:4px solid black;
+            border-bottom: 4px solid black;
+            transform:rotate(225deg);
+            cursor: pointer;
+        }
+        #rhtclick{
+              width:50%;
+            height:50%;
+            border-left:4px solid black;
+            border-bottom: 4px solid black;
+            margin-left:10px;
+            cursor:pointer;
+            transform:rotate(45deg);
+        }
+        .slide{
+            display:grid;
+            grid-template-columns: auto auto auto;
+            column-gap: 0px;
+            margin:5% 20%;
+        }
+        h1{
+            grid-column-start: 1;
+            grid-column-end:4;
+            font-style: italic;
+            text-decoration: underline;
+            color:white;
+            text-align: center;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <h1>Slider By Using JAVA SCRIPT</h1>
+    <div><div class="left"><div id="rhtclick"></div></div></div>
+    <main>
+       <img src="https://wallpapercave.com/wp/3pfuWFi.jpg" alt="cruppted">
+       <img src="https://img.freepik.com/premium-photo/colorful-bird-sits-branch-forest_549702-8400.jpg" alt="" id="img1">
+       <img src="https://wallpapercave.com/wp/BlBEmB0.jpg" alt="">
+       <img src="https://img.freepik.com/premium-photo/kingfisher-d…-open-tail-down-showcasing-dyna_1115749-11012.jpg" alt="">
+       <img src="https://d.ibtimes.co.uk/en/full/1527516/spixs-macaw.jpg" alt="">
+    </main>
+    <div><div class="left"><div id="lftclick"></div></div></div>
+    </div>
+    <script>
+        let img1=document.querySelectorAll("img");
+        let fwd=document.getElementById("lftclick");
+        let len=img1.length
+        fwd.onclick=()=>{
+            if(img1[0]!==img1[len-1]){
+            img1[len-1].style.transform="translateX(-100%)";
+            img1[len-1].style.transition="transform 1s ease";
+            len--;
+            }
+        }
+        let bwd=document.getElementById("rhtclick");
+        bwd.onclick=()=>{
+            if(img1[img1.length-1]!==img1[len-1]){
+            img1[len].style.transform="translateX(0%)";
+            img1[len].style.transition="transform 1s ease";
+            len++;
+            }
+        }
+    </script>
+</body>
+</html>

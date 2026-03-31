@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dark{
+            background-color: black;
+            color:white;
+        }
+        .white{
+            background-color:white;
+            color:black;
+        }
+    </style>
+</head>
+<body class="white">
+    <button id="btn">Click Me !!</button>
+    <p>Welcome User</p>
+    <script>
+        let btn=document.getElementById("btn");
+        let count=0;
+        let bdy=document.querySelector("body");
+        btn.onclick=(evt)=>{
+         count++;
+         if(count%2==0)
+          bdy.setAttribute("class","white");
+        else
+         bdy.setAttribute("class","dark");
+        }
+    </script>
+</body>
+</html>
