@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Equation</title>
+    <style>
+        input{
+            margin:10px 10px;
+            width:100px;
+            text-align: center;
+        }
+        body{
+            background-color: black;
+            color:red;
+        }
+        button{
+            margin:10px 10px;
+        }
+        main{
+            margin:50px 50px;
+        }
+        h3{
+            font-style: italic;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h3>Linear Equation of 2 variable</h3>
+        <div><input type="text" name="" id="a1" required>x + <input type="text" id="b1" required>y =<input type="text" required id="c1"></div>
+        <div><input type="text" id="a2" required>x + <input type="text" required id="b2">y =<input type="text" required id="c2"></div>
+        <button>submit</button>
+    </main>
+     <script>
+        let btn1=document.querySelectorAll("button");
+        let count=0;
+      let result=document.createElement("div");
+        btn1[0].onclick=()=>{
+            count++;
+            if(count!==1)
+            result.remove();
+        let a1=Number(document.getElementById("a1").value);
+           let b1=Number(document.getElementById("b1").value);
+              let c1=Number(document.getElementById("c1").value);
+                      let a2=Number(document.getElementById("a2").value);
+           let b2=Number(document.getElementById("b2").value);
+              let c2=Number(document.getElementById("c2").value);
+              let x=((b2*c1)-(b1*c2))/((a1*b2)-(a2*b1));
+              let y=((c1*a2)-(c2*a1))/((b1*a2)-(b2*a1));
+              result.innerHTML=`<h4>The value of x is ${x} and y is ${y}</h4>`;
+              btn1[0].after(result);
+
+        };
+     </script>
+</body>
+</html>
