@@ -14,6 +14,7 @@ btn.addEventListener("click",()=>{
        {
          mark=document.createElement("input");
          mark.classList.add("multi_input");
+         mark.name=`${i+1} subject`;
         document.querySelector("#box").prepend(mark);
        }}
        if(count==2)
@@ -49,7 +50,7 @@ btn.addEventListener("click",()=>{
     final.innerHTML=`Total Score:${total}<br>Average Score:${avg}<br>Grade:${grade}`;
     final.style.fontStyle="italic";
     document.querySelector(".marks").style.backgroundColor="Black";
-    document.querySelector(".marks").style.color="white";
+    document.querySelector(".marks").style.color="orange";
     document.querySelector(".marks").prepend(final);
        }
 
