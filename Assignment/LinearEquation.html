@@ -19,6 +19,8 @@
         }
         main{
             margin:50px 50px;
+            display:grid;
+            grid-template-columns: auto auto ;
         }
         h3{
             font-style: italic;
@@ -28,14 +30,22 @@
 </head>
 <body>
     <main>
+        <div>
         <h3>Linear Equation of 2 variable</h3>
         <div><input type="text" name="" id="a1" required>x + <input type="text" id="b1" required>y =<input type="text" required id="c1"></div>
         <div><input type="text" id="a2" required>x + <input type="text" required id="b2">y =<input type="text" required id="c2"></div>
         <button>submit</button>
+        </div>
+        <div>
+            <h3>Quadratic Equation </h3>
+            <div><input type="text" id="a" required>x<sup>2</sup> + <input type="text" id="b" required> x + <input type="text" required id="c"> = 0</div>
+         <button>submit</button>
+        </div>
     </main>
      <script>
         let btn1=document.querySelectorAll("button");
         let count=0;
+        let count2=0;
       let result=document.createElement("div");
         btn1[0].onclick=()=>{
             count++;
@@ -53,6 +63,21 @@
               btn1[0].after(result);
 
         };
+         let result1 =document.createElement("div");
+        btn1[1].onclick=()=>{
+            count2++;
+            if(count2!=1)
+            result1.remove();
+            let a =Number(document.getElementById("a").value);
+                let b =Number(document.getElementById("b").value);
+                    let c =Number(document.getElementById("c").value);
+                    let D=(b*b-4*a*c);
+                    let x=((-b)+Math.sqrt(D))/(2*a);
+                    let y=((-b)-Math.sqrt(D))/(2*a);
+                    result1.innerHTML=`<h4>First root  is ${x} and Second root  is ${y}</h4>`;
+                    btn1[1].after(result1);
+
+        }
      </script>
 </body>
 </html>
