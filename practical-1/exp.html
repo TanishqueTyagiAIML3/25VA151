@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            display:grid;
+            grid-template-columns:  auto auto;
+            position:relative;
+            top:0;
+            width:300px;
+            left:40%;
+            color:white;
+            border:2px solid white;
+            padding:3px 3px;
+            column-gap: 5px;
+            row-gap: 5px;
+        }
+        body{
+            background-color: black;
+        }
+        h3{
+            grid-column-start: 1;
+            grid-column-end:3;
+        }
+        #save{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        input{
+            width:100px ;
+            height:20px;
+        }
+        #head{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    </style>
+</head>
+<body>
+    <main>
+      <h3>
+        Employee Detail
+      </h3>
+      <input type="text" placeholder="Enter the name " id="name">
+      <input type="text" placeholder="Enter the salary" id="salary">
+      <button id="save">Submit </button>
+      <div id="head">
+       <button id="avg">Average Salary</button>
+       <button id="sal">Salary Greater than 10000</button>
+       </div>
+    </main>
+    <script>
+          let brr=[];
+          let arr=[];
+          let btn=document.getElementById("save");
+
+          btn.onclick=()=>{
+              let name=document.getElementById("name").value;
+              arr.push(name);
+              let salary= Number(document.getElementById("salary").value);
+              brr.push(salary);
+              alert("Data Saved!");
+          }
+
+          let btn1=document.getElementById("avg");
+          let d1=document.createElement("div");
+
+          btn1.onclick=()=>{
+              let avg=0;
+              for(let i=0;i<brr.length;i++){
+                  avg+=brr[i];
+              }
+              avg = brr.length > 0 ? avg/brr.length : 0;
+              d1.innerText="Average Salary: " + avg;
+              document.getElementById("head").after(d1);
+          }
+
+          let btn2=document.getElementById("sal");
+          let d2=document.createElement("div");
+
+          btn2.onclick=()=>{
+              let highSalaries = brr.filter(sal => sal > 10000);
+              d2.innerText="Salaries > 10000: " + highSalaries.join(", ");
+              document.getElementById("head").after(d2);
+          }
+    </script>
+</body>
+</html>

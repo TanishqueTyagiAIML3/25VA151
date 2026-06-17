@@ -13,6 +13,12 @@
     <button class="btn btn-outline-warning">Hello</button>
     <button class="btn btn-info">info</button>
     <button class="btn btn-light" onclick="prompt(`Enter the Sachin favorite person`)">light</button>
-    <button class="btn btn-dark btn-outline-danger" onclick="alert(`It is Sachin Day`)">Dark</button>
+    <button class="btn btn-dark btn-outline-danger" >Dark</button>
+    <script>
+        let body=document.querySelector("body");
+        body.children[6].onclick=()=>{
+            confirm("Helllo");
+        }
+    </script>
 </body>
 </html>
