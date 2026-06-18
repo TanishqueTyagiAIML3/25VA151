@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number</title>
+    <style>
+        main{
+    margin:200px auto;
+    width:300px;
+    background-color: antiquewhite;
+    border:1px solid red;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    border-radius: 2%;
+        }
+        input{
+            text-align: center;
+            margin:10px 60px;
+        }
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h2>Prime Number Calculator</h2>
+        <h3>Enter the Number</h3>
+        <input type="text" name="" id="num" required style="display: block;">
+        <button >Check Prime</button>
+    </main>
+    <script>
+        let btn=document.querySelector("button")
+        let div=document.createElement("div")
+        div.style.marginTop="10px"
+        btn.onclick=()=>{
+            let n=Number(document.querySelector("#num").value)
+            let count=0
+            for(let j=1;j<=n;j++)
+        {
+            if(n%j==0)
+            count=count+1;
+        }
+        if(count==2)
+        {
+            div.innerHTML="<i>Result->The Number is Prime</i>"
+        }
+        else
+        {
+            div.innerHTML="<i>Result->Number is not prime</i>"
+        }
+        document.querySelector("button").after(div);
+        }
+    </script>
+</body>
+</html>
