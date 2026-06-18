@@ -16,10 +16,17 @@ a:hover{
   margin:50px;
 
 }
+button:hover{
+  cursor:pointer;
+}
 .container img{
   width:200px;
   height:200px;
   border-Radius:10%;
+}
+footer>div>p{
+  border-right: 2px solid grey;
+  padding:20px;
 }
 .container img:hover{
   transform: scale(1.1,1.1);
@@ -30,6 +37,7 @@ a:hover{
 }
 footer{
   border:1px solid grey;
+  border-radius: 2%;
 }
 .counter {
   font-size: 16px;
